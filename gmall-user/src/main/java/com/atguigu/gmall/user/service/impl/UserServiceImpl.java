@@ -7,8 +7,6 @@ import com.atguigu.gmall.user.mapper.UserMapper;
 import com.atguigu.gmall.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Example;
-
 import java.util.List;
 
 @Service
@@ -38,4 +36,6 @@ public class UserServiceImpl implements UserService {
        umsMemberReceiveAddressMapper.selectByExample ( e );
        return null;                  Example使用复杂，后期再用               */
     }
+
+
 }

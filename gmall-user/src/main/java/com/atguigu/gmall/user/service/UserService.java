@@ -11,4 +11,5 @@ public interface UserService {
     List< UmsMember > getAllUesr ();
 
     List< UmsMemberReceiveAddress> getReceiveAddressByMemberId ( String memberId );
+
 }
