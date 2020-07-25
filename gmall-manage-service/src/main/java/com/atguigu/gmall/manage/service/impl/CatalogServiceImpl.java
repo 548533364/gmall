@@ -29,7 +29,6 @@ public class CatalogServiceImpl implements CatalogService {
         return pmsBaseCatalog1Mapper.selectAll ();
 }
 
-
     @Override
     public List < PmsBaseCatalog2 > getCatalog2 ( String catalog1Id ) {//查询所有二级分类列表，返回格式是json格式，用@Requstbody注解
         PmsBaseCatalog2 pmsBaseCatalog2 =new PmsBaseCatalog2 ();
