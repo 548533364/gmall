@@ -19,21 +19,22 @@ public class SpuController {
     @Reference
     SpuService spuService;
 
-    @RequestMapping ("saveSpuInfo")
+    @RequestMapping("/saveSpuInfo")
     @ResponseBody
-    public String saveSpuInfo( @RequestBody PmsProductInfo pmsProductInfo ){
+    public String saveSpuInfo(@RequestBody PmsProductInfo pmsProductInfo){
         spuService.saveSpuInfo(pmsProductInfo);
         return "success";
     }
 
-    @RequestMapping("spuList")
+
+    @RequestMapping("/spuList")
     @ResponseBody
-    public List< PmsProductInfo > spuList(String catalog3Id){
-        List< PmsProductInfo > pmsProductInfos=spuService. spuList( catalog3Id);
+    public List<PmsProductInfo> spuList(String catalog3Id){
+        List<PmsProductInfo> pmsProductInfos = spuService.spuList(catalog3Id);
         return pmsProductInfos;
     }
 
-    @RequestMapping ("fileUpload")
+    @RequestMapping ("/fileUpload")
     @ResponseBody
     public String fileUpload( @RequestParam ("file") MultipartFile multipartFile ){  //spring-mvc将图片封装成MultipartFile，二进制的混合式媒体格式
         //将图片上或者视频传到分布式存储系统
@@ -44,18 +45,18 @@ public class SpuController {
         return imgUrl;
     }
 
-    @RequestMapping("spuSaleAttrList")
+    @RequestMapping("/spuSaleAttrList")
     @ResponseBody
-    public List< PmsProductSaleAttr > spuSaleAttrList(String spuId){
+    public List< PmsProductSaleAttr > spuSaleAttrList( String spuId){
         List<PmsProductSaleAttr> pmsProductSaleAttrs = spuService.spuSaleAttrList(spuId);
         return pmsProductSaleAttrs;
     }
 
-    @RequestMapping("spuImageList")
+
+    @RequestMapping("/spuImageList")
     @ResponseBody
-    public List< PmsProductImage > spuImageList(String spuId){
-        List<PmsProductImage>pmsProductImages =spuService.spuImageList(spuId);
+    public List< PmsProductImage > spuImageList( String spuId){
+        List<PmsProductImage> pmsProductImages = spuService.spuImageList(spuId);
         return pmsProductImages;
     }
-
 }

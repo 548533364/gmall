@@ -17,83 +17,83 @@ public class UmsMemberReceiveAddress implements Serializable {
     private String region;
     private String detailAddress;
 
-    public String getId () {
+    public String getId() {
         return id;
     }
 
-    public void setId ( String id ) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getMemberId () {
+    public String getMemberId() {
         return memberId;
     }
 
-    public void setMemberId ( String memberId ) {
+    public void setMemberId(String memberId) {
         this.memberId = memberId;
     }
 
-    public String getName () {
+    public String getName() {
         return name;
     }
 
-    public void setName ( String name ) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getPhoneNumber () {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber ( String phoneNumber ) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public int getDefaultStatus () {
+    public int getDefaultStatus() {
         return defaultStatus;
     }
 
-    public void setDefaultStatus ( int defaultStatus ) {
+    public void setDefaultStatus(int defaultStatus) {
         this.defaultStatus = defaultStatus;
     }
 
-    public String getPostCode () {
+    public String getPostCode() {
         return postCode;
     }
 
-    public void setPostCode ( String postCode ) {
+    public void setPostCode(String postCode) {
         this.postCode = postCode;
     }
 
-    public String getProvince () {
+    public String getProvince() {
         return province;
     }
 
-    public void setProvince ( String province ) {
+    public void setProvince(String province) {
         this.province = province;
     }
 
-    public String getCity () {
+    public String getCity() {
         return city;
     }
 
-    public void setCity ( String city ) {
+    public void setCity(String city) {
         this.city = city;
     }
 
-    public String getRegion () {
+    public String getRegion() {
         return region;
     }
 
-    public void setRegion ( String region ) {
+    public void setRegion(String region) {
         this.region = region;
     }
 
-    public String getDetailAddress () {
+    public String getDetailAddress() {
         return detailAddress;
     }
 
-    public void setDetailAddress ( String detailAddress ) {
+    public void setDetailAddress(String detailAddress) {
         this.detailAddress = detailAddress;
     }
 }

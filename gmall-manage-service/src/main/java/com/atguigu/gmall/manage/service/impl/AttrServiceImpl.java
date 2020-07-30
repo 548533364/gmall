@@ -36,7 +36,7 @@ public class AttrServiceImpl implements AttrService {
         //将SKU列表信息添加进SPU属性列表。
         for (PmsBaseAttrInfo baseAttrInfo : pmsBaseAttrInfos) {
 
-           List<PmsBaseAttrValue> pmsBaseAttrValues =new ArrayList <> (  );
+           List< PmsBaseAttrValue > pmsBaseAttrValues =new ArrayList <> (  );
             PmsBaseAttrValue pmsBaseAttrValue = new PmsBaseAttrValue ( );
             pmsBaseAttrValue.setAttrId ( baseAttrInfo.getId () );
             pmsBaseAttrValues = pmsBaseAttrValueMapper.select ( pmsBaseAttrValue );

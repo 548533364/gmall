@@ -24,7 +24,7 @@ public class CatalogController {
 
     @RequestMapping("getCatalog2")
     @ResponseBody
-    public List< PmsBaseCatalog2> getCatalog2(  String catalog1Id ){
+    public List< PmsBaseCatalog2 > getCatalog2( String catalog1Id ){
         List< PmsBaseCatalog2 > catalog2s= catalogService.getCatalog2(catalog1Id);
         return catalog2s;
     }
@@ -32,7 +32,7 @@ public class CatalogController {
 
     @RequestMapping("getCatalog3")
     @ResponseBody
-    public List< PmsBaseCatalog3 > getCatalog3(String catalog2Id){
+    public List< PmsBaseCatalog3 > getCatalog3( String catalog2Id){
         List<PmsBaseCatalog3> catalog3s= catalogService.getCatalog3(catalog2Id);
         return catalog3s;
     }

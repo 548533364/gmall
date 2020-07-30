@@ -11,6 +11,6 @@ public interface AttrService {
 
     String saveAttrInfo ( PmsBaseAttrInfo pmsBaseAttrInfo );
 
-    List< PmsBaseSaleAttr> baseSaleAttrList ();
+    List< PmsBaseSaleAttr > baseSaleAttrList ();
 
 }

@@ -6,10 +6,10 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Date;
 
-public class UmsMember implements Serializable {
+public class UmsMember implements Serializable{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)  //配置通用mapper的主键和主键返回策略
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String memberLevelId;
     private String username;
@@ -30,155 +30,160 @@ public class UmsMember implements Serializable {
     private int luckeyCount;
     private int historyIntegration;
 
-    public String getId () {
+    public String getId() {
         return id;
     }
 
-    public void setId ( String id ) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getMemberLevelId () {
+    public String getMemberLevelId() {
         return memberLevelId;
     }
 
-    public void setMemberLevelId ( String memberLevelId ) {
+    public void setMemberLevelId(String memberLevelId) {
         this.memberLevelId = memberLevelId;
     }
 
-    public String getUsername () {
+    public String getUsername() {
         return username;
     }
 
-    public void setUsername ( String username ) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
-    public String getPassword () {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword ( String password ) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public String getNickname () {
+    public String getNickname() {
         return nickname;
     }
 
-    public void setNickname ( String nickname ) {
+    public void setNickname(String nickname) {
         this.nickname = nickname;
     }
 
-    public String getPhone () {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone ( String phone ) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public int getStatus () {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus ( int status ) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
-    public Date getCreateTime () {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime ( Date createTime ) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    public String getIcon () {
+    public String getIcon() {
         return icon;
     }
 
-    public void setIcon ( String icon ) {
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 
-    public int getGender () {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender ( int gender ) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 
-    public Date getBirthday () {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday ( Date birthday ) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
-    public String getCity () {
+    public String getCity() {
         return city;
     }
 
-    public void setCity ( String city ) {
+    public void setCity(String city) {
         this.city = city;
     }
 
-    public String getJob () {
+    public String getJob() {
         return job;
     }
 
-    public void setJob ( String job ) {
+    public void setJob(String job) {
         this.job = job;
     }
 
-    public String getPersonalizedSignature () {
+    public String getPersonalizedSignature() {
         return personalizedSignature;
     }
 
-    public void setPersonalizedSignature ( String personalizedSignature ) {
+    public void setPersonalizedSignature(String personalizedSignature) {
         this.personalizedSignature = personalizedSignature;
     }
 
-    public int getSourceType () {
+    public int getSourceType() {
         return sourceType;
     }
 
-    public void setSourceType ( int sourceType ) {
+    public void setSourceType(int sourceType) {
         this.sourceType = sourceType;
     }
 
-    public int getIntegration () {
+    public int getIntegration() {
         return integration;
     }
 
-    public void setIntegration ( int integration ) {
+    public void setIntegration(int integration) {
         this.integration = integration;
     }
 
-    public int getGrowth () {
+    public int getGrowth() {
         return growth;
     }
 
-    public void setGrowth ( int growth ) {
+    public void setGrowth(int growth) {
         this.growth = growth;
     }
 
-    public int getLuckeyCount () {
+    public int getLuckeyCount() {
         return luckeyCount;
     }
 
-    public void setLuckeyCount ( int luckeyCount ) {
+    public void setLuckeyCount(int luckeyCount) {
         this.luckeyCount = luckeyCount;
     }
 
-    public int getHistoryIntegration () {
+    public int getHistoryIntegration() {
         return historyIntegration;
     }
 
-    public void setHistoryIntegration ( int historyIntegration ) {
+    public void setHistoryIntegration(int historyIntegration) {
         this.historyIntegration = historyIntegration;
     }
+
+
+
+
+
 }

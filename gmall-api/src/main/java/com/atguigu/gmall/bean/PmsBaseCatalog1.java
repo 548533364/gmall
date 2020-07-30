@@ -44,4 +44,3 @@ public class PmsBaseCatalog1 implements Serializable {
         this.name = name;
     }
 }
-
