@@ -27,6 +27,7 @@ public class SkuController {
         if (StringUtils .isBlank ( skuDefaultImg )){
             pmsSkuInfo.setSkuDefaultImg ( pmsSkuInfo.getSkuImageList ().get(0).getImgUrl () );
         }
+
         skuServiice.saveSkuInfo(pmsSkuInfo);
         return "success";
     }

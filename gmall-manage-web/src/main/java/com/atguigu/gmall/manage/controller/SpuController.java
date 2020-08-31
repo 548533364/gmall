@@ -18,14 +18,12 @@ public class SpuController {
 
     @Reference
     SpuService spuService;
-
     @RequestMapping("/saveSpuInfo")
     @ResponseBody
     public String saveSpuInfo(@RequestBody PmsProductInfo pmsProductInfo){
         spuService.saveSpuInfo(pmsProductInfo);
         return "success";
     }
-
 
     @RequestMapping("/spuList")
     @ResponseBody
@@ -38,7 +36,6 @@ public class SpuController {
     @ResponseBody
     public String fileUpload( @RequestParam ("file") MultipartFile multipartFile ){  //spring-mvc将图片封装成MultipartFile，二进制的混合式媒体格式
         //将图片上或者视频传到分布式存储系统
-
         //将图片的存储路径返回给页面
         String imgUrl= PmsUploadUtil.uploadImage(multipartFile);
         System.out.println (imgUrl );
@@ -51,7 +48,6 @@ public class SpuController {
         List<PmsProductSaleAttr> pmsProductSaleAttrs = spuService.spuSaleAttrList(spuId);
         return pmsProductSaleAttrs;
     }
-
 
     @RequestMapping("/spuImageList")
     @ResponseBody

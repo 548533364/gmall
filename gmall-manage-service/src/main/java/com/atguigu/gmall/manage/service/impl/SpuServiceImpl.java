@@ -67,6 +67,28 @@ public class SpuServiceImpl implements SpuService {
 
     }
 
+    //展示销售属性列表，获取所有销售属性值PmsProductSaleAttr、PmsProductSaleAttrValue、PmsSkuInfo这三张表
+    @Override
+    public List < PmsProductSaleAttr > spuSaleAttrListCheckBySku ( String productId ,String skuId) {
+        // 干嘛要生气呢，能走到最后的？我现在开始怀疑我自己了。
+        //注释的代码的错误代码，通用mapper不能查询多表
+        // PmsProductSaleAttr pmsProductSaleAttr = new PmsProductSaleAttr ( );
+        // pmsProductSaleAttr.setProductId ( productId );
+        // List < PmsProductSaleAttr > pmsProductSaleAttrs = pmsProductSaleAttrMapper.select ( pmsProductSaleAttr );
+        //
+        // for (PmsProductSaleAttr productSaleAttr : pmsProductSaleAttrs) {
+        //     String saleAttrId = productSaleAttr.getSaleAttrId ( );
+        //     PmsProductSaleAttrValue pmsProductSaleAttrValue = new PmsProductSaleAttrValue ( );
+        //     pmsProductSaleAttrValue.setSaleAttrId ( saleAttrId );
+        //     pmsProductSaleAttrValue.setProductId ( productId );
+        //     List < PmsProductSaleAttrValue > pmsProductSaleAttrValues = pmsProductSaleAttrValueMapper.select ( pmsProductSaleAttrValue );
+        //     productSaleAttr.setSpuSaleAttrValueList ( pmsProductSaleAttrValues );
+        //
+        // }
+        List < PmsProductSaleAttr > pmsProductSaleAttrs = pmsProductSaleAttrMapper.selectSpuSaleAttrListCheckBySku(productId,skuId);
+        return pmsProductSaleAttrs;
+    }
+
     //属性列表的
     @Override
     public List<PmsProductSaleAttr> spuSaleAttrList(String spuId) {

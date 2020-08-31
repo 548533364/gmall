@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 @Controller
 @CrossOrigin
-public class CatalogController {
+public class  CatalogController {
     @Reference
     CatalogService catalogService;
 
@@ -28,7 +28,6 @@ public class CatalogController {
         List< PmsBaseCatalog2 > catalog2s= catalogService.getCatalog2(catalog1Id);
         return catalog2s;
     }
-
 
     @RequestMapping("getCatalog3")
     @ResponseBody
