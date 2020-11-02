@@ -11,16 +11,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @Controller
 public class ItemController {
+
     @Reference
     SkuService skuService;
     @Reference
@@ -37,17 +36,25 @@ public class ItemController {
          map.put ( "skuInfo",pmsSkuInfo );
         //销售属性列表
         List< PmsProductSaleAttr > pmsProductSaleAttrs = spuService.spuSaleAttrListCheckBySku(pmsSkuInfo.getProductId (),pmsSkuInfo.getId ());
+
         map.put ( "spuSaleAttrListCheckBySku",pmsProductSaleAttrs );
 
         //查询当前sku的spu的其他sku的集合的hashMap
         Map < String, String > skuSaleAttrHash = new HashMap <> ( );
+
         List<PmsSkuInfo> pmsSkuInfos = skuService.getSkuSaleAttrValueListBySpu(pmsSkuInfo.getProductId());
+
         for (PmsSkuInfo skuInfo : pmsSkuInfos) {
+
             String k = "";
+
             String v =skuInfo.getId ();
+
             //获取的k，v值，需要拼接成一个hash。
             List<PmsSkuSaleAttrValue> skuSaleAttrValueList = skuInfo.getSkuSaleAttrValueList();
+
             for (PmsSkuSaleAttrValue pmsSkuSaleAttrValue : skuSaleAttrValueList) {
+
                 k += pmsSkuSaleAttrValue.getSaleAttrValueId() + "|";// "239|245"
             }
             skuSaleAttrHash.put ( k,v );
@@ -55,6 +62,7 @@ public class ItemController {
 
         //讲skud的销售属性的hash表放到页面上 ，直接放到客户端，将其当作json来操作
         String skuSaleAttrHashJsonStr = JSON.toJSONString(skuSaleAttrHash);
+
         map.put("skuSaleAttrHashJsonStr",skuSaleAttrHashJsonStr);
 
         return "item";

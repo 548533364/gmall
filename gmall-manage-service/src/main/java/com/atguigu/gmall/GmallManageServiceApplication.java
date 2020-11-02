@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@EnableDubbo
 @MapperScan(basePackages = "com.atguigu.gmall.manage.mapper")
+@EnableDubbo
 public class GmallManageServiceApplication {
 
     public static void main ( String[] args ) {

@@ -24,7 +24,6 @@ public class PmsUploadUtil {
             e.printStackTrace ( );
         }
 
-
         TrackerClient trackerClient = new TrackerClient ( );
         //获得一个traServer的实例；
         TrackerServer trackerServer = null;
@@ -33,7 +32,7 @@ public class PmsUploadUtil {
         } catch (IOException e) {
             e.printStackTrace ( );
         }
-        //通过tracker获取到Stirage的客户端
+        //通过tracker获取到Storage的客户端
         StorageClient storageClient = new StorageClient ( trackerServer,null );
         //storageClient.append_file ( "E:/Google Dowload/ad.jpg","jpg",null );
 

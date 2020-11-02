@@ -71,7 +71,7 @@ public class SpuServiceImpl implements SpuService {
     @Override
     public List < PmsProductSaleAttr > spuSaleAttrListCheckBySku ( String productId ,String skuId) {
         // 干嘛要生气呢，能走到最后的？我现在开始怀疑我自己了。
-        //注释的代码的错误代码，通用mapper不能查询多表
+        //注释的代码的错误代码，通用mapper不能查询多表，用mybatis数据库查询语句
         // PmsProductSaleAttr pmsProductSaleAttr = new PmsProductSaleAttr ( );
         // pmsProductSaleAttr.setProductId ( productId );
         // List < PmsProductSaleAttr > pmsProductSaleAttrs = pmsProductSaleAttrMapper.select ( pmsProductSaleAttr );

@@ -16,7 +16,7 @@ public class PmsProductInfo implements Serializable {
 
     @Column
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue ( strategy = GenerationType.IDENTITY )
     private String id;
 
     @Column
@@ -26,13 +26,13 @@ public class PmsProductInfo implements Serializable {
     private String description;
 
     @Column
-    private  String catalog3Id;
+    private String catalog3Id;
 
     @Transient
-    private List<PmsProductSaleAttr> spuSaleAttrList;
+    private List < PmsProductSaleAttr > spuSaleAttrList;
 
     @Transient
-    private List<PmsProductImage> spuImageList;
+    private List < PmsProductImage > spuImageList;
 
     public String getId () {
         return id;
@@ -82,3 +82,5 @@ public class PmsProductInfo implements Serializable {
         this.spuImageList = spuImageList;
     }
 }
+
+    
