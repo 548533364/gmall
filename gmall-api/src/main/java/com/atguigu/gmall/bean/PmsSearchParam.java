@@ -6,9 +6,13 @@ import java.util.List;
 
 public class PmsSearchParam implements Serializable{
 
-    private String catalog3Id;
+    private String catalog3Id; //三级分类ID
 
-    private String keyword;
+    private String keyword;//关键字
+
+    private List<PmsSkuAttrValue> skuAttrValueList; //平台属性集合     《是PmsBaseAttrInfo以及PmsBaseAttrValue两张表的集合》
+
+    //面包屑
 
     public String getCatalog3Id () {
         return catalog3Id;
@@ -34,7 +38,7 @@ public class PmsSearchParam implements Serializable{
         this.skuAttrValueList = skuAttrValueList;
     }
 
-    private List<PmsSkuAttrValue> skuAttrValueList;
+
 
 
 }
