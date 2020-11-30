@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
+/**这一步出错，es中，kibana启动失败，暂时做到gmall11天**/
 @Service
 public class SearchServiceImpl implements SearchService {
 
@@ -109,18 +109,18 @@ public class SearchServiceImpl implements SearchService {
             MatchQueryBuilder matchQueryBuilder = new MatchQueryBuilder ( "skuName",keyword );
             boolQueryBuilder.must ( matchQueryBuilder );
         }
-        /** java聚合代码**/
+        /** ES的java聚合代码**/
         //创建聚合函数，函数名叫“groupBy_attr”，字段是“skuAttrValueList.valueId”
         TermsAggregationBuilder groupby_attr = AggregationBuilders.terms ( "groupBy_attr" ).field ( "skuAttrValueList.valueId" );
         searchSourceBuilder.aggregation ( groupby_attr );
-
+        /**聚合之后还要解析，不会**/
         return searchSourceBuilder.toString ( );
 
     }
     /**
      * 搜索页面的平台属性列表是从搜索结果中抽取出来的，不是根据三级分类ID查询的所有平台属性的集合
      *    解决方法
-     *          1、es中使用aggregations聚合函数抽取平台属性
+     *          1、es中使用aggregations聚合函数抽取平台属性《这个会有统计的一步，吃掉很多性能》
      *
      *          2、使用java代码抽取平台属性《这个性能会更高》
      */
