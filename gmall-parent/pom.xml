@@ -23,7 +23,7 @@
 
         <fastjson.version>1.2.58</fastjson.version>
         <dubbo-starter.version>0.1.0</dubbo-starter.version>
-        <dubbo.version>2.6.0</dubbo.version>
+        <dubbo.version>2.6.9</dubbo.version>
         <zookeeper.version>3.5.2-alpha</zookeeper.version>
         <zkclient.version>0.10</zkclient.version>
         <mybatis.version>2.1.2</mybatis.version>
